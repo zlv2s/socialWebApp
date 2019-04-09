@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard">
+  <div id="dashboard">
     <section>
       <div class="col1">
         <div class="profile">

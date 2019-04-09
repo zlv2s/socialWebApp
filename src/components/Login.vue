@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div id="login">
     <transition name="fade">
       <div class="loading" v-if="performingRequest">
         <p>Loading...</p>
