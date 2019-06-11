@@ -29,7 +29,7 @@
         </transition>
         <div v-if="posts.length">
           <div :key="post.id" class="post" v-for="post in posts">
-            <h5>{{ post.userName }}</h5>
+            <h5>{{ post.username }}</h5>
             <span>{{ post.createdOn | formatDate }}</span>
             <p>{{ post.content | trimLength }}</p>
             <ul>
@@ -41,6 +41,9 @@
               </li>
               <li>
                 <a @click="viewPost(post)">view full post</a>
+              </li>
+              <li>
+                <a @click="deletePost(post)">delete</a>
               </li>
             </ul>
           </div>
@@ -146,6 +149,13 @@ export default {
     closePostModal() {
       this.postComments = []
       this.showPostModal = false
+    },
+    deletePost({ id }) {
+      fb.postsCollection
+        .doc(id)
+        .delete()
+        .then(() => console.log('delete success'))
+        .catch(err => console.log(err))
     },
     likePost(postId, postLikes) {
       let docId = `${this.currentUser.uid}_${postId}`

@@ -7,11 +7,8 @@
     </transition>
     <section>
       <div class="col1">
-        <h1>Vuegram</h1>
-        <p>
-          Welcome to the
-          <a href="https://savvyapps.com/" target="_blank">Savvy Apps</a> sample social media web app powered by Vue.js and Firebase.
-        </p>
+        <h1>Hi, There</h1>
+        <p>code changes world</p>
       </div>
       <div :class="{'signup-form':!showLoginForm && !showForgotPassword}" class="col2">
         <form @submit.prevent v-if="showLoginForm">
@@ -207,6 +204,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-</style>

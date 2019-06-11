@@ -133,14 +133,15 @@ section {
 }
 
 .button {
+
   background: $primary;
   border: 0;
   outline: 0;
   color: $white;
-  padding: 0.8rem 1rem;
+  padding: 6px 16px;
   min-width: 150px;
-  font-size: 16px;
-  border-radius: 3px;
+  font-size: 14px;
+  border-radius: 100px;
   cursor: pointer;
 
   &:hover {
