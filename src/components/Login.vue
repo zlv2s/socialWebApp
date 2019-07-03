@@ -8,14 +8,14 @@
     <section>
       <div class="col1">
         <h1>Hi, There</h1>
-        <p>code changes world</p>
+        <p>The best way to predict the future is to invent it</p>
       </div>
       <div :class="{'signup-form':!showLoginForm && !showForgotPassword}" class="col2">
         <form @submit.prevent v-if="showLoginForm">
           <h1>Welcome Back</h1>
 
           <label for="email1">Email</label>
-          <input id="email1" placeholder="you@email.com" type="text" v-model.trim="loginForm.email">
+          <input id="email1" placeholder="you@email.com" type="text" v-model.trim="loginForm.email" />
 
           <label for="password1">Password</label>
           <input
@@ -23,7 +23,7 @@
             placeholder="******"
             type="password"
             v-model.trim="loginForm.password"
-          >
+          />
 
           <button @click="login" class="button">Log In</button>
 
@@ -36,10 +36,10 @@
           <h1>Get Started</h1>
 
           <label for="name">Name</label>
-          <input id="name" placeholder="Savvy Apps" type="text" v-model.trim="signupForm.name">
+          <input id="name" placeholder="Savvy Apps" type="text" v-model.trim="signupForm.name" />
 
           <label for="title">Title</label>
-          <input id="title" placeholder="Company" type="text" v-model.trim="signupForm.title">
+          <input id="title" placeholder="Company" type="text" v-model.trim="signupForm.title" />
 
           <label for="email2">Email</label>
           <input
@@ -47,7 +47,7 @@
             placeholder="you@email.com"
             type="text"
             v-model.trim="signupForm.email"
-          >
+          />
 
           <label for="password2">Password</label>
           <input
@@ -55,7 +55,7 @@
             placeholder="min 6 characters"
             type="password"
             v-model.trim="signupForm.password"
-          >
+          />
 
           <button @click="signup" class="button">Sign Up</button>
 
@@ -74,7 +74,7 @@
               placeholder="you@email.com"
               type="text"
               v-model.trim="passwordForm.email"
-            >
+            />
 
             <button @click="resetPassword" class="button">Submit</button>
 
