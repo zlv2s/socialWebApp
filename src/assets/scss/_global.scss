@@ -1,5 +1,6 @@
 // imports
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro|Noto+Sans+SC&display=swap');
 
 // colors
 $primary: #30A0EE;
@@ -23,7 +24,8 @@ html {
 }
 
 * {
-  font-family: 'Open Sans', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
+  font-family: 'Maven Pro', 'Noto Sans SC', sans-serif;
   box-sizing: border-box;
   transition: 0.15s;
 
@@ -67,7 +69,7 @@ p {
 }
 
 a {
-  font-family: 'Open Sans', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
   text-decoration: none;
   color: $primary;
   margin: 0;
