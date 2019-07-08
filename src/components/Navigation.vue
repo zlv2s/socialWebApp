@@ -3,7 +3,7 @@
     <section>
       <div class="col1">
         <router-link to="/dashboard">
-          <h3>Vuegram</h3>
+          <h3>🖊️ VUE-BBS</h3>
         </router-link>
         <ul class="inline">
           <li>
@@ -22,7 +22,8 @@
 </template>
 
 <script >
-const fb = require('../firebaseConfig.js')
+// const fb = require('../firebaseConfig.js')
+import * as fb from '../firebaseConfig'
 export default {
   methods: {
     logout() {

@@ -28,7 +28,7 @@
           <button @click="login" class="button">Log In</button>
 
           <div class="extras">
-            <a @click="togglePasswordReset">Forgot Password</a>
+            <a @click="togglePasswordReset">Forgot Password ?</a>
             <a @click="toggleForm">Create an Account</a>
           </div>
         </form>
@@ -36,10 +36,10 @@
           <h1>Get Started</h1>
 
           <label for="name">Name</label>
-          <input id="name" placeholder="Savvy Apps" type="text" v-model.trim="signupForm.name" />
+          <input id="name" placeholder="Your Name" type="text" v-model.trim="signupForm.name" />
 
           <label for="title">Title</label>
-          <input id="title" placeholder="Company" type="text" v-model.trim="signupForm.title" />
+          <input id="title" placeholder="Your Title" type="text" v-model.trim="signupForm.title" />
 
           <label for="email2">Email</label>
           <input
@@ -99,7 +99,8 @@
 </template>
 
 <script>
-const fb = require('../firebaseConfig.js')
+// const fb = require('../firebaseConfig.js')
+import * as fb from '../firebaseConfig'
 export default {
   data() {
     return {
@@ -131,8 +132,8 @@ export default {
           this.loginForm.email,
           this.loginForm.password
         )
-        .then(user => {
-          this.$store.commit('setCurrentUser', user.user)
+        .then(UserCredential => {
+          this.$store.commit('setCurrentUser', UserCredential.user)
           this.$store.dispatch('fetchUserProfile')
           this.$router.push('/dashboard')
         })
@@ -149,11 +150,11 @@ export default {
           this.signupForm.email,
           this.signupForm.password
         )
-        .then(user => {
-          this.$store.commit('setCurrentUser', user.user)
+        .then(UserCredential => {
+          this.$store.commit('setCurrentUser', UserCredential.user)
           // create user obj
           fb.usersCollection
-            .doc(user.user.uid)
+            .doc(UserCredential.user.uid)
             .set({
               name: this.signupForm.name,
               title: this.signupForm.title

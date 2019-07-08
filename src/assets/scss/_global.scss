@@ -1,5 +1,4 @@
 // imports
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Maven+Pro|Noto+Sans+SC&display=swap');
 
 // colors
@@ -24,7 +23,6 @@ html {
 }
 
 * {
-  // font-family: 'Open Sans', sans-serif;
   font-family: 'Maven Pro', 'Noto Sans SC', sans-serif;
   box-sizing: border-box;
   transition: 0.15s;
@@ -142,7 +140,7 @@ section {
   color: $white;
   padding: 6px 16px;
   min-width: 150px;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 100px;
   cursor: pointer;
 

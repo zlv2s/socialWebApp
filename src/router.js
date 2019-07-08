@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import firebase from 'firebase'
-import Login from '@/components/Login'
-import Dashboard from '@/components/Dashboard'
-import Setting from '@/components/Setting'
+// import Login from '@/components/Login'
+// import Dashboard from '@/components/Dashboard'
+// import Setting from '@/components/Setting'
 
 Vue.use(Router)
 
@@ -16,18 +16,18 @@ const router = new Router({
     }, {
       path: '/login',
       name: 'Login',
-      component: Login
+      component: () => import('./components/Login.vue')
     }, {
       path: '/dashboard',
       name: 'Dashboard',
-      component: Dashboard,
+      component: () => import('./components/Dashboard.vue'),
       meta: {
         requiresAuth: true
       }
     }, {
       path: '/setting',
       name: 'Setting',
-      component: Setting,
+      component: () => import('./components/Setting.vue'),
       meta: {
         requiresAuth: true
       }

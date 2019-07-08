@@ -1,16 +1,17 @@
 import firebase from 'firebase'
 import 'firebase/firestore'
 
-// Initialize Firebase
-var config = {
-  apiKey: 'AIzaSyAankrV0nm0y04NucolU3Z5YwzN6H1EXuo',
-  authDomain: 'zoulige11.firebaseapp.com',
-  databaseURL: 'https://zoulige11.firebaseio.com',
-  projectId: 'zoulige11',
-  storageBucket: 'zoulige11.appspot.com',
-  messagingSenderId: '659760262178'
+var firebaseConfig = {
+  apiKey: 'AIzaSyAnqVtEdEjWabGdH1Gt4anipbAPXW875BI',
+  authDomain: 'vue-bbs.firebaseapp.com',
+  databaseURL: 'https://vue-bbs.firebaseio.com',
+  projectId: 'vue-bbs',
+  storageBucket: '',
+  messagingSenderId: '152081377431',
+  appId: '1:152081377431:web:50939b823a1a41fa'
 }
-firebase.initializeApp(config)
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig)
 
 // firebase utils
 const db = firebase.firestore()

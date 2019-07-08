@@ -9,9 +9,11 @@ fb.auth.onAuthStateChanged(user => {
   if (user) {
     store.commit('setCurrentUser', user)
     store.dispatch('fetchUserProfile')
+    console.log(user)
 
     fb.usersCollection.doc(user.uid).onSnapshot(doc => {
-      store.commit('setUserProfile'.doc.data())
+      console.log(doc)
+      store.commit('setUserProfile', doc.data())
     })
 
     // realtime updates from our posts collection
