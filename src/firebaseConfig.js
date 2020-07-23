@@ -2,13 +2,13 @@ import firebase from 'firebase'
 import 'firebase/firestore'
 
 var firebaseConfig = {
-  apiKey: 'AIzaSyAnqVtEdEjWabGdH1Gt4anipbAPXW875BI',
+  apiKey: process.env.VUE_APP_APIKEY,
   authDomain: 'vue-bbs.firebaseapp.com',
   databaseURL: 'https://vue-bbs.firebaseio.com',
   projectId: 'vue-bbs',
   storageBucket: '',
   messagingSenderId: '152081377431',
-  appId: '1:152081377431:web:50939b823a1a41fa'
+  appId: process.env.VUE_APP_APPID
 }
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig)
