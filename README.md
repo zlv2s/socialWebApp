@@ -1,16 +1,13 @@
-# Vue Social Web App
+# Vue BBS
 
-> a simple social media web app with Vue.js and Firebase
+> a simple bbs with Vue.js and Firebase
 
 ### Project Overview
-* Start a production-ready project using Vue CLI.
-* Handle and manage state for your app using Vuex. You'll also understand why a central store is important for building large-scale apps.
-* Maintain reactivity within your app by utilizing built-in Vuex features.
+
 * Authenticate routes with vue-router.
 * Read/write to a database using Firebase's Cloud Firestore.
 * Set up authentication using Firebase.
-* Leverage components, one of the more powerful features of Vue.js.
-* Familiarize yourself with core Vue.js concepts.
+
 
 ### Project setup
 ```
@@ -26,7 +23,3 @@ npm run serve
 ```
 npm run build
 ```
-
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
